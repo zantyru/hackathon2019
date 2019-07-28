@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=06e6730c-4654-4477-909e-c30ec4824b26&lang=ru_RU" type="text/javascript">
+	</script>
+	<script src="javascript/script.js"></script>
+
+	<title>Clean Rout</title>
+
+	<script type="text/javascript">
+    // Функция ymaps.ready() будет вызвана, когда
+    // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+    ymaps.ready(init);
+    function init()
+    { 
+        // Создание карты.    
+        var myMap = new ymaps.Map("map2", 
+        {
+        	center: [55.734876, 37.59308],
+        	zoom: 10
+        });
+
+       var multiRoute = new ymaps.multiRouter.MultiRoute({
+    referencePoints: [
+        [[55.708618], [37.747787]],
+        'Привольная 13'
+    ],
+        // Параметры маршрутизации.
+        params: {
+            // Ограничение на максимальное количество маршрутов, возвращаемое маршрутизатором.
+            results: 2
+        }
+    }, {
+        // Автоматически устанавливать границы карты так, чтобы маршрут был виден целиком.
+        boundsAutoApply: true
+    });
+
+
+// Добавление маршрута на карту.
+myMap.geoObjects.add(multiRoute);
+
+    multiRoute.model.events.once("requestsuccess", function () 
+        {   
+            var yandexWayPoint1 = multiRoute.getWayPoints().get(0);            
+            yandexWayPoint1.properties.set({myPosition: "Стоянка"});
+            yandexWayPoint1.options.set(
+                {                
+                    iconContentLayout: ymaps.templateLayoutFactory.createClass('РосТранс 13')            
+                });
+
+            var yandexWayPoint2 = multiRoute.getWayPoints().get(1);            
+            yandexWayPoint2.properties.set({myPosition: "Цель"});
+            yandexWayPoint2.options.set(
+                {                
+                    iconContentLayout: ymaps.templateLayoutFactory.createClass('Необходимо подмести')            
+                });        
+        });
+
+
+}
+</script>
+
+</head>
+<body>
+
+
+
+	<div class="block">
+       <div id = "map2">
+       </div>		
+   </div>
+
+
+
+</body>
+</html>

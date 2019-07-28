@@ -1,0 +1,248 @@
+html, body
+{
+
+	height: 100%;
+
+	margin: 0;
+
+}
+
+
+.logo
+{
+	height: 40px;
+	width: 60px;
+}
+
+
+#page
+{
+
+	min-height: 100%;
+
+	display: flex;
+
+	flex-direction: column;
+
+}
+
+.navbar
+{
+
+	background: #7dc58d;
+
+}
+
+.here
+{
+	margin-top: 10px;
+
+	height: 40px;
+	width: 80px;
+}
+
+p
+{
+	font-size: 10px;
+}
+
+article
+{
+
+	padding-top: 30px;
+
+	padding-bottom: 50px;
+
+	margin-bottom: auto;
+
+}
+
+footer
+{
+
+	height: 60px;
+
+	background: gray;
+
+	color: white;
+
+}
+
+#map
+{
+	height: 400px;
+	border: solid 2px grey;
+	padding: 1px;
+	padding-right: 2px;
+}
+
+#map2
+{
+	height: 100%;
+}
+
+.block
+{
+	width: 100%;
+	height: 100%;
+}
+
+
+#clientmap
+{
+	height: 100%;
+	width: 100%;
+}
+
+.calendar
+{
+	padding-top: 5px;
+	border-top: solid 2px grey;
+	border-bottom: solid 2px grey;
+	border-right: solid 2px grey;
+}
+
+.calendar
+{
+	padding-left: 10px;
+}
+
+.listresources
+{
+	border-left: solid 2px grey;
+	border-bottom: solid 2px grey;
+}
+
+.listplans
+{
+	border-left: solid 2px grey;
+	border-bottom: solid 2px grey;
+		border-right: solid 2px grey;
+		padding-bottom:5%;
+}
+
+.descriptionresource
+{
+
+	border-bottom: solid 2px grey;
+	border-right: solid 2px grey;
+	padding-bottom:5%;
+}
+
+.tasklist
+{
+	border-bottom: solid 2px grey;
+	border-right: solid 2px grey;
+	margin-bottom:5%;
+}
+
+.center
+{
+	text-align: center;
+}
+
+.contentblock
+{
+	margin-left: 10px;
+	padding-bottom: 5%;
+}
+
+.btn
+{
+
+	width: 100%;
+	margin-left: 3px;
+	margin-top: 10px;
+
+	background-color: grey;
+
+	color: white;
+
+	border: 0;
+
+}
+
+.btn:hover,
+
+.btn:focus,
+
+.btn:visited
+{
+
+	background-color: #fffffa;
+	color: #2f0c61;
+
+	outline: none;
+
+	border: 0;
+
+}
+
+.form-check-input
+{
+	margin-top: 20px;
+}
+
+
+.header 
+{
+	background: #AB1857;
+	height: 70px;
+}
+
+.title
+{
+	font-size: 36px;
+	padding-top: 10px;
+	text-align: center;
+}
+
+.aref
+{
+	color: black;
+}
+
+.aref:hover
+{
+	text-decoration: none;
+	color: #edf0f5;
+	font-size: 30px;
+}
+
+.name
+{
+	font-size: 16px;
+}
+
+.progress
+{
+	margin-top: 10px;
+}
+
+/* внешние границы таблицы серого цвета толщиной 1px */
+table 
+{
+	border: 1px solid grey;
+	text-align: center;
+	font-size: 12px;
+} 
+/* границы ячеек первого ряда таблицы */
+th {border: 1px solid grey;}
+/* границы ячеек тела таблицы */
+td {border: 1px solid grey;}
+/* сделает ширину таблицы равной ширине блока контейнера, в котором она находится */
+table {width: 100%;}
+/* задаст фиксированную ширину для таблицы */
+table {width: 445px;}
+.left
+{
+	text-align: left;
+}
+
+.topic
+{
+	margin-bottom: 10px;
+	background: #fffffa;
+	color: #2f0c61;
+	font-weight: bold;
+}
